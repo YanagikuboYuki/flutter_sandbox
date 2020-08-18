@@ -9,32 +9,76 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Container(
-                width: 100.0,
-                color: Colors.red,
+              CircleAvatar(
+                backgroundColor: Colors.red,
+                radius: 50.0,
+                backgroundImage: AssetImage('images/ruby.png'),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    color: Colors.yellow,
-                    width: 100.0,
-                    height: 100.0,
-                  ),
-                  Container(
-                    color: Colors.green,
-                    width: 100.0,
-                    height: 100.0,
-                  ),
-                ],
+              Text(
+                'Ruby',
+                style: TextStyle(
+                    fontFamily: 'Pacifico',
+                    fontSize: 40.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold),
               ),
-              Container(
-                width: 100.0,
-                color: Colors.blue,
-              )
+              Text(
+                'Package team',
+                style: TextStyle(
+                  fontFamily: 'Source Sans Pro',
+                  color: Colors.teal.shade100,
+                  letterSpacing: 2.5,
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.teal.shade100,
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                child: ListTile(
+                    leading: Icon(
+                      Icons.phone,
+                      color: Colors.teal,
+                    ),
+                    title: Text(
+                      '+11 111 111 111',
+                      style: TextStyle(
+                          color: Colors.teal,
+                          fontSize: 20.0,
+                          fontFamily: 'Source Sans Pro'),
+                    )),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    'ruby@email.com',
+                    style: TextStyle(
+                        color: Colors.teal,
+                        fontSize: 20.0,
+                        fontFamily: 'Source Sans Pro'),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
